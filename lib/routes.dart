@@ -11,15 +11,17 @@ class Routes {
     routerDelegate: null,
   );
 
+  static get router => null;
+
   static void initRoutes() {
-    _router.define("/detail/:id", handler: new Handler(
+    router.define("/detail/:id", handler: new Handler(
         handlerFunc: (BuildContext context, Map<String, dynamic> params) {
       return new DetailPage(params["id"]);
     }));
   }
 
   static void navigateTo(context, String route) {
-    _router.navigateTo(context, _router);
+    router.navigateTo(context, _router);
   }
 }
 
