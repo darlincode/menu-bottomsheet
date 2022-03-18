@@ -25,4 +25,4 @@ class Routes {
   }
 }
 
-class NavigateTo {}
+
